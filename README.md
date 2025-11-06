@@ -12,5 +12,6 @@ My NeoVim configuration
 ## Instalisation
 
 ```shell
+mv ~/.config/nvim ~/.config/nvim.bak; mv ~/.local/share/nvim ~/.local/share/nvim.bak; mv ~/.local/state/nvim ~/.local/state/nvim.bak # to keep the old configuration
 git clone https://github.com/Flat447/FVim ~/.config/nvim
 ```
