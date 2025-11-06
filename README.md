@@ -1,0 +1,2 @@
+# FVim
+NeoVim configuration
