@@ -9,6 +9,15 @@ My NeoVim configuration
 ![5](Images/5.png)
 ![6](Images/6.png)
 
+## Dependencies
+[`NeoVim`](https://github.com/neovim/neovim)
+[`TreeSitter CLI`](https://github.com/tree-sitter/tree-sitter)
+[`RipGrep`](https://github.com/BurntSushi/ripgrep)
+[`Python`](https://www.python.org/)
+[`NodeJS`](https://nodejs.org/)
+[`Vim Plug`](https://github.com/junegunn/vim-plug)
+[`Nerd Fonts`](https://www.nerdfonts.com/font-downloads)
+
 ## Instalisation
 
 ```shell
