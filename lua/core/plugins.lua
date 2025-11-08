@@ -27,11 +27,17 @@ require("lazy").setup({
 		}
 	},
     {
+        "norcalli/nvim-colorizer.lua"
+    },
+    {
+        "sbatin/platformio.nvim",
+        dependencies = { "numToStr/FTerm.nvim" }
+    },
+    {
 	    'ellisonleao/glow.nvim',
 	    config = function()
 		    require('glow').setup({
 			    style = 'dark',
-			    width = 120,
 		    })
 	   end,
     },
@@ -124,7 +130,10 @@ require("lazy").setup({
   {'L3MON4D3/LuaSnip'},
   {
       'nvim-telescope/telescope.nvim',
-      dependencies = {'nvim-lua/plenary.nvim'}
+      dependencies = {
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope-media-files.nvim'
+      }
   },
   {
       "nvimtools/none-ls.nvim",

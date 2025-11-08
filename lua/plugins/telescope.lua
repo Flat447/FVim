@@ -1,3 +1,4 @@
+local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '*', builtin.live_grep, {})
@@ -12,3 +13,11 @@ vim.keymap.set('n', 'gr', builtin.lsp_references,
                 {noremap = true, silent = true})
 vim.keymap.set('n', 'gd', builtin.lsp_definitions,
                 {noremap = true, silent = true})
+telescope.setup({
+    extensions = {
+        media_files = {
+            filetypes = {"png", "jpg", "jpeg", "gif", "webp", "svg"},
+            find_cmd = "rg"
+        }
+    }
+})

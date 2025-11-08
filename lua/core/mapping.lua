@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set('n', '<leader>q', ':quit<CR>', opts)
+vim.keymap.set('n', '<leader>q', ':quit!<CR>', opts)
 vim.keymap.set('n', '<C-s>', ':write<CR>', opts)
 
 -- Neotree
