@@ -27,7 +27,15 @@ require("lazy").setup({
 		}
 	},
     {
-        "norcalli/nvim-colorizer.lua"
+        "uga-rosa/ccc.nvim",
+        config = function()
+            require("ccc").setup({
+                highlighter = {
+                    auto_enable = true,
+                    lsp = true,
+                },
+            })
+        end
     },
     {
         "sbatin/platformio.nvim",
@@ -118,9 +126,12 @@ require("lazy").setup({
         end,
         theme = "dragon",
       })
-      
-      vim.cmd("colorscheme kanagawa-wave")
     end,
+  },
+  { 
+      'catppuccin/nvim',
+      name = 'catppuccin',
+      priority = 1000
   },
   {'hrsh7th/cmp-nvim-lsp'},
   {'hrsh7th/cmp-buffer'},
