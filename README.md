@@ -1,6 +1,5 @@
 # FVim
-My NeoVim configuration
-
+---------
 ## Gallery:
 ![1](Images/1.png)
 ![2](Images/2.png)
