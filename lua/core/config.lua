@@ -13,4 +13,4 @@ vim.opt.undofile = true
 vim.opt.shell = '/bin/fish'
 vim.opt.number = true
 vim.opt.relativenumber = true
-
+vim.o.background = "dark"

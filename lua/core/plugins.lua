@@ -14,7 +14,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
 	{ 'phaazon/hop.nvim' },
 	{ 
@@ -26,6 +25,15 @@ require("lazy").setup({
 			"s1n7ax/nvim-window-picker"
 		}
 	},
+    {
+        "ibhagwan/fzf-lua",
+        dependencies = { "nvim-tree/nvim-web-devicons" }
+    },
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+	config = true
+    },
     {
         "uga-rosa/ccc.nvim",
         config = function()
@@ -133,6 +141,11 @@ require("lazy").setup({
       name = 'catppuccin',
       priority = 1000
   },
+  {
+      'ellisonleao/gruvbox.nvim',
+      name = 'gruvbox',
+      priority = 1000
+  },
   {'hrsh7th/cmp-nvim-lsp'},
   {'hrsh7th/cmp-buffer'},
   {'hrsh7th/cmp-path'},
@@ -155,6 +168,22 @@ require("lazy").setup({
       config = function()
           require("nvim-autopairs").setup()
         end,
+  },
+  {
+      "numToStr/Comment.nvim",
+      lazy = false,
+      config = function()
+          require("Comment").setup({
+              toggler = {
+                    line = '<C-_>', -- Ctrl + / на большинстве раскладок
+                    block = '<leader>gb',
+                },
+                opleader = {
+                    line = '<C-_>',
+                    block = '<leader>gb',
+                },
+            })
+    end
   },
   {
       'akinsho/bufferline.nvim',

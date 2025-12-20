@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 
 vim.keymap.set('n', '<leader>q', ':quit!<CR>', opts)
 vim.keymap.set('n', '<C-s>', ':write<CR>', opts)
+vim.keymap.set('n', '<leader>w', ':write<CR>', opts)
+vim.keymap.set('n', '<leader>r', ':redo<CR>', opts)
 
 -- Neotree
 vim.keymap.set('n', '<leader>e', ':Neotree float focus <CR>')

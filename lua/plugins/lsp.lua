@@ -105,7 +105,6 @@ function M.setup()
           ["rust-analyzer"] = {
             diagnostics = { enable = true },
             cargo = { allFeatures = true },
-            checkOnSave = { command = "clippy" },
           }
         }
         vim.lsp.start({
