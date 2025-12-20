@@ -1,6 +1,6 @@
 # FVim
 My NeoVim configuration
-
+-------------------
 ## Gallery:
 ![1](Images/1.png)
 ![2](Images/2.png)
@@ -8,7 +8,7 @@ My NeoVim configuration
 ![4](Images/4.png)
 ![5](Images/5.png)
 ![6](Images/6.png)
-
+-------------------
 ## Instalisation
 
 ```shell
