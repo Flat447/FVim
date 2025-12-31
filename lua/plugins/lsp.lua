@@ -18,7 +18,11 @@ function M.setup()
     ensure_installed = {
       "rust_analyzer",
       "clangd",
-      "lua_ls"
+      "lua_ls",
+      "hyprls",
+      "ruff",
+      "pyright",
+      "vimls"
     },
     automatic_installation = true,
   })
