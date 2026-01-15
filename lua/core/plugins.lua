@@ -33,7 +33,7 @@ require("lazy").setup({
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
-	config = true
+	    config = true
     },
     {
         "uga-rosa/ccc.nvim",
@@ -70,7 +70,10 @@ require("lazy").setup({
        event = "VimEnter",
        dependencies = { "nvim-tree/nvim-web-devicons" }
     },
-	{ 'nvim-treesitter/nvim-treesitter' },
+	{ 
+       'nvim-treesitter/nvim-treesitter',
+       build = ":TSUpdate"
+    },
         {
          "neovim/nvim-lspconfig",
           event = { "BufReadPre", "BufNewFile" },
