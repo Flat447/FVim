@@ -2,7 +2,7 @@
 require('core.plugins')
 require("core.mapping")
 require("core.config")
-vim.cmd.colorscheme 'gruvbox'
+vim.cmd.colorscheme 'catppuccin-mocha'
 -- Plugins
 require('plugins.neotree')
 require('plugins.lsp')
@@ -13,3 +13,4 @@ require('plugins.telescope')
 require('plugins.bufferline')
 require('plugins.alpha')
 require('plugins.todo')
+require('plugins.toggleterm')

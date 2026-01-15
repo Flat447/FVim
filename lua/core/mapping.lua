@@ -6,8 +6,7 @@ vim.keymap.set('n', '<leader>w', ':write<CR>', opts)
 vim.keymap.set('n', '<leader>r', ':redo<CR>', opts)
 
 -- Neotree
-vim.keymap.set('n', '<leader>e', ':Neotree float focus <CR>')
-vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>')
+vim.keymap.set('n', '<leader>e', ':Neotree toggle focus <CR>')
 
 -- Glow
 vim.keymap.set('n', '<leader>m', ':Glow<CR>', opts)
@@ -37,3 +36,4 @@ vim.keymap.set("n", "<leader>p", "<Cmd>BufferLineTogglePin<CR>", opts)
 -- Сортировка буферов
 vim.keymap.set("n", "<leader>bs", "<Cmd>BufferLineSortByTabs<CR>", { desc = "Sort by tabs" })
 
+vim.keymap.set("n", "<leader><CR>", ":ToggleTerm direction=float<CR>")

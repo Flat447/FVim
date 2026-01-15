@@ -4,7 +4,6 @@
             enable_git_status = true,
             enable_diagnostics = true,
             sort_case_insensitive = true,
-            
             default_component_configs = {
                 container = {
                     enable_character_fade = true
@@ -25,7 +24,7 @@
                     folder_closed = "",
                     folder_open = "",
                     folder_empty = "",
-                    default = "",
+                    default = "",
                     highlight = "NeoTreeFileIcon"
                 },
                 modified = {

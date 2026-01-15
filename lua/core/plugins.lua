@@ -16,6 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ 'phaazon/hop.nvim' },
+ 	{ 'akinsho/toggleterm.nvim', version = "*", config = true },
 	{ 
 		"nvim-neo-tree/neo-tree.nvim",
 		dependencies = {
