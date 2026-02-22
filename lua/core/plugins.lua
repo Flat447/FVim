@@ -70,9 +70,25 @@ require("lazy").setup({
        event = "VimEnter",
        dependencies = { "nvim-tree/nvim-web-devicons" }
     },
-	{ 
-       'nvim-treesitter/nvim-treesitter',
-       build = ":TSUpdate"
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ":TSUpdate",
+        config = function()
+            -- Мы НЕ вызываем require("nvim-treesitter.configs")
+            -- Мы вызываем основной модуль или просто настраиваем через opts
+            local ts_install = require("nvim-treesitter.install")
+            ts_install.prefer_git = true
+        
+            -- Если вам ОЧЕНЬ нужно вызвать setup, попробуйте обернуть его в pcall, 
+            -- чтобы Neovim хотя бы загружался:
+            local ok, configs = pcall(require, "nvim-treesitter.configs")
+            if ok then
+                configs.setup({
+                    ensure_installed = { 'rust', 'typescript', 'lua', 'go', 'python', 'javascript' },
+                    highlight = { enable = true },
+                })
+            end
+        end
     },
         {
          "neovim/nvim-lspconfig",
@@ -146,9 +162,19 @@ require("lazy").setup({
       priority = 1000
   },
   {
+      'Shatur/neovim-ayu',
+      name = 'ayu',
+      priority = 1000 
+  },
+  {
       'ellisonleao/gruvbox.nvim',
       name = 'gruvbox',
       priority = 1000
+  },
+  {
+      'simoneSantoni/ubuntu-cs.nvim',
+      name = 'yaru',
+      priority = 1000 
   },
   {'hrsh7th/cmp-nvim-lsp'},
   {'hrsh7th/cmp-buffer'},
